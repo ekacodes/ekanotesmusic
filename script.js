@@ -9,16 +9,16 @@ let masterSongName = document.getElementById('masterSongName');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
-    {songName: "Thodi Der-Half Girlfriend", filePath: "songs/1.mp3", coverPath: "lulu.png"},
-    {songName: "Tu Hi Hai-Half Girlfriend", filePath: "songs/2.mp3", coverPath: "lulu.png"},
-    {songName: "Pal Bhar-Half Girlfriend", filePath: "songs/3.mp3", coverPath: "lulu.png"},
-    {songName: "Stay a Little Longer-Half Girlfriend", filePath: "songs/4.mp3", coverPath: "lulu.png"},
-    {songName: "Half Girlfriend Theme", filePath: "songs/5.m4a", coverPath: "lulu.png"},
-    {songName:"Illahi-YJHD", filePath: "songs/6.mp3", coverPath: "lulu.png"},
-    {songName: "Hum Mar Jayenge-Ashiqui 2 ", filePath: "songs/7.mp3", coverPath: "lulu.png"},
-    {songName: "Tera Hone Laga Hoon-APKGK", filePath: "songs/8.mp3", coverPath: "lulu.png"},
-    {songName: "Mann Mera-Table No.21", filePath: "songs/9.mp3", coverPath: "lulu.png"},
-    {songName: "Sunn Raha Hai-Ashiqui 2", filePath: "songs/10.mp3", coverPath: "lulu.png"},
+    {songName: "Thodi Der-Half Girlfriend", filePath: "1.mp3", coverPath: "lulu.png"},
+    {songName: "Tu Hi Hai-Half Girlfriend", filePath: "2.mp3", coverPath: "lulu.png"},
+    {songName: "Pal Bhar-Half Girlfriend", filePath: "3.mp3", coverPath: "lulu.png"},
+    {songName: "Stay a Little Longer-Half Girlfriend", filePath: "4.mp3", coverPath: "lulu.png"},
+    {songName: "Half Girlfriend Theme", filePath: "5.mp3", coverPath: "lulu.png"},
+    {songName:"Illahi-YJHD", filePath: "6.mp3", coverPath: "lulu.png"},
+    {songName: "Hum Mar Jayenge-Ashiqui 2 ", filePath: "7.mp3", coverPath: "lulu.png"},
+    {songName: "Tera Hone Laga Hoon-APKGK", filePath: "8.mp3", coverPath: "lulu.png"},
+    {songName: "Mann Mera-Table No.21", filePath: "9.mp3", coverPath: "lulu.png"},
+    {songName: "Sunn Raha Hai-Ashiqui 2", filePath: "10.mp3", coverPath: "lulu.png"},
 ]
 
 songItems.forEach((element, i)=>{ 
@@ -64,7 +64,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         songIndex = parseInt(e.target.id);
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
-        audioElement.src = `songs/${songIndex+1}.mp3`;
+        audioElement.src = `${songIndex+1}.mp3`;
         masterSongName.innerText = songs[songIndex].songName;
         audioElement.currentTime = 0;
         audioElement.play();
@@ -81,7 +81,7 @@ document.getElementById('next').addEventListener('click', ()=>{
     else{
         songIndex += 1;
     }
-    audioElement.src = `songs/${songIndex+1}.mp3`;
+    audioElement.src = `${songIndex+1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
@@ -97,7 +97,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
     else{
         songIndex -= 1;
     }
-    audioElement.src = `songs/${songIndex+1}.mp3`;
+    audioElement.src = `${songIndex+1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
     audioElement.play();
